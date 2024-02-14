@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.cats-panel {
+  list-style-type: disc;
+}
+
+.cats-panel__row {
+  margin-top: 10px;
+  text-align: start;
+}
