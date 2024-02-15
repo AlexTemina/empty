@@ -28,7 +28,7 @@ function useGet(url: string) {
   return data || [];
 }
 
-function usePost(url: string, data: any) {
+function usePost(url: string = '', data: any = {}) {
   const [response, setResponse] = useState({ data: null });
 
   const cb = useCallback(() => {
@@ -43,7 +43,7 @@ function usePost(url: string, data: any) {
       });
   }, [url, data]);
 
-  return [response.data, cb];
+  return { response: response.data, cb: cb };
 }
 
 export { useGet, usePost };
